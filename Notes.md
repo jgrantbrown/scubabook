@@ -1,4 +1,6 @@
 
+ADDED axios for fetch requests
+
 Needs:
 Decide flow of app
   Home page for login/SignUP
