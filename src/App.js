@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Profile from './components/Profile/Profile';
 import DiversList from './components/DiversList/DiversList';
+import MainPage from './components/MainPage/MainPage';
 
 import './App.css';
+
+
+
 // import axios from 'axios';
 
 class App extends Component  {
@@ -10,14 +15,18 @@ class App extends Component  {
   render(){
     return (
         <div className="homeScreen">
-          Scuba Dive Log Book
-          <p> About link or small summary of app </p>
-          <p> Add Login/ SignUP button</p>
+            <nav>
+              <Link to="/">Home</Link>
+              <Link to="/profiles">Profiles</Link>
+              <Link to="/divers">Divers</Link>
+            </nav>
 
-          <p> If logged in show Welcome/profile page</p>
+            <div>
+              <Route path="/" exact component={MainPage} />
+              <Route path="/profiles" component={Profile} />
+              <Route path="/divers" component={DiversList } />
+            </div>
 
-          <Profile/>
-          <DiversList />
       </div>
   )
 }
