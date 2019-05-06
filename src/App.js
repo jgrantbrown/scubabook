@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink} from 'react-router-dom';
 import Profile from './components/Profile/Profile';
 import DiversList from './components/DiversList/DiversList';
 import MainPage from './components/MainPage/MainPage';
@@ -15,10 +15,12 @@ class App extends Component  {
   render(){
     return (
         <div className="homeScreen">
-            <nav>
-              <Link to="/">Home</Link>
-              <Link to="/profiles">Profiles</Link>
-              <Link to="/divers">Divers</Link>
+            <nav className="navContent">
+
+           <NavLink className="Nav_link" to="/">Home</NavLink>
+           <NavLink className="Nav_link" to="/profiles">Profiles</NavLink>
+           <NavLink className="Nav_link" to="/divers">Divers</NavLink>
+
             </nav>
 
             <div>

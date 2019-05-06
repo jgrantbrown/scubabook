@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+/* a:link - a normal, unvisited link
+a:visited - a link the user has visited
+a:hover - a link when the user mouses over it
+a:active - a link the moment it is clicked */
+.Nav_link{
+  padding-left: 5px;
+  text-decoration: none;
+}
+
+.Nav_link:hover{
+  color: yellow;
+}
+
+.Nav_link:visited{
+  color: pink;
+}
+
 .homeScreen{
   text-align: center;
   background: blue;
