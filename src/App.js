@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink} from 'react-router-dom';
 import Profile from './components/Profile/Profile';
 import DiversList from './components/DiversList/DiversList';
+import DiveSites from './components/DiveSites/DiveSites';
 import MainPage from './components/MainPage/MainPage';
 
 import './App.css';
@@ -19,12 +20,14 @@ class App extends Component  {
                <NavLink className="Nav_link" to="/">Home</NavLink>
                <NavLink className="Nav_link" to="/profiles">Profiles</NavLink>
                <NavLink className="Nav_link" to="/divers">Divers</NavLink>
+               <NavLink className="Nav_link" to="/divesites">Dive Sites</NavLink>
             </nav>
 
             <div>
               <Route path="/" exact component={MainPage} />
               <Route path="/profiles" component={Profile} />
               <Route path="/divers" component={DiversList } />
+              <Route path="/divesites" component={DiveSites } />
             </div>
 
       </div>
