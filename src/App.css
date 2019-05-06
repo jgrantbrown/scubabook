@@ -19,6 +19,10 @@ a:active - a link the moment it is clicked */
   color: pink;
 }
 
+.Nav_link:visited:hover{
+  color: yellow;
+}
+
 .homeScreen{
   text-align: center;
   background: blue;

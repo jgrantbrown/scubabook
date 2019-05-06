@@ -1,18 +1,23 @@
 import React from 'react';
 
+// LAter to get from backend
+let divers = [{id:1, firstName: "Joe", lastName: "Smith"},{id:2, firstName: "Mike", lastName: "Johnson"}]
+const listDivers = divers.map((diver)=>
+  <li>{diver.firstName} {diver.lastName} </li>)
 
-function DiversList() {
+
+class DiversList extends React.Component {
+  render(){
   return (
     <div className="diverListSection">
         <p> Diver List</p>
+
           <ul>
-            <li>Diver 1</li>
-            <li>Diver 2</li>
-            <li>Diver 3</li>
+            {listDivers}
           </ul>
 
     </div>
-  );
+  )};
 }
 
 export default DiversList;

@@ -16,11 +16,9 @@ class App extends Component  {
     return (
         <div className="homeScreen">
             <nav className="navContent">
-
-           <NavLink className="Nav_link" to="/">Home</NavLink>
-           <NavLink className="Nav_link" to="/profiles">Profiles</NavLink>
-           <NavLink className="Nav_link" to="/divers">Divers</NavLink>
-
+               <NavLink className="Nav_link" to="/">Home</NavLink>
+               <NavLink className="Nav_link" to="/profiles">Profiles</NavLink>
+               <NavLink className="Nav_link" to="/divers">Divers</NavLink>
             </nav>
 
             <div>
