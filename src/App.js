@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, NavLink} from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
 import Profile from './components/Profile/Profile';
 import DiversList from './components/DiversList/DiversList';
 import DiveSites from './components/DiveSites/DiveSites';
@@ -12,22 +12,25 @@ import './App.css';
 // import axios from 'axios';
 
 class App extends Component  {
-
+  debugger
   render(){
     return (
         <div className="homeScreen">
             <nav className="navContent">
                <NavLink className="Nav_link" to="/">Home</NavLink>
-               <NavLink className="Nav_link" to="/profiles">Profiles</NavLink>
+                {/*  <NavLink className="Nav_link" to="/profiles">Profiles</NavLink> */}
                <NavLink className="Nav_link" to="/divers">Divers</NavLink>
                <NavLink className="Nav_link" to="/divesites">Dive Sites</NavLink>
             </nav>
 
             <div>
+            <Switch>
               <Route path="/" exact component={MainPage} />
-              <Route path="/profiles" component={Profile} />
+            {/*  <Route path="/profiles" component={Profile} /> */}
+              <Route path="/profiles/:id" exact component={Profile } />
               <Route path="/divers" component={DiversList } />
               <Route path="/divesites" component={DiveSites } />
+              </Switch>
             </div>
 
       </div>
